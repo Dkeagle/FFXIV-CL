@@ -1,0 +1,206 @@
+/* GENERAL */
+*, *::before, *::after{
+	font-size: 16px;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+a, a:hover, a:visited{
+	text-decoration: underline;
+	cursor: pointer;
+	color: inherit;
+}
+
+body{
+	background-color: #ADD8E6 /* Light Blue */;
+}
+
+@font-face{
+	font-family: "Lobster";
+	src: url(./fonts/Lobster-Regular.ttf);
+}
+
+/* HEADER */
+.header{
+	position: fixed;
+	z-index: 2;
+	border: solid 1px #424542;
+	box-shadow: 1px 1px #E7DFE7,
+				-1px -1px #E7DFE7,
+				1px -1px #E7DFE7,
+				-1px 1px #E7DFE7,
+				0 -2px #9C9A9C,
+				-2px 0 #7B757B,
+				0 2px #424542,
+				0 5px 20px #FFFFFF;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	width: 100%;
+	background: linear-gradient(147deg, #BC8F8F 0%, #734545 100%); /* Rosy Brown */;
+}
+
+.header > #date{
+	margin-left: 50px;
+	font-family: Lobster, "Lucida Handwriting", cursive;
+	font-size: 1.4em;
+	color: white;
+	white-space: nowrap;
+	overflow: auto;
+}
+
+.header > #date::before{
+	content: "Checklist - ";
+	font-size: inherit;
+	font-family: inherit;
+}
+
+.header > #lang_switch{
+	margin-right: 50px;
+	height: 70%;
+	transition: .3s ease-in-out;
+	user-select: none;
+}
+
+.header > #lang_switch:hover{
+	transform: scale(1.2);
+}
+
+/* MAIN */
+.main{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-gap: 30px;
+	padding: 25px;
+	padding-top: 75px;
+}
+
+.main > div{
+	border-radius: 30px;
+	padding: 25px;
+	border: solid 1px #424542;
+	box-shadow: 1px 1px #E7DFE7,
+				-1px -1px #E7DFE7,
+				1px -1px #E7DFE7,
+				-1px 1px #E7DFE7,
+				0 -2px #9C9A9C,
+				-2px 0 #7B757B,
+				0 2px #424542,
+				0 0 20px #FFFFFF;
+}
+
+.main h1{
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 0 0 5px 20px;
+}
+
+.main label{
+	white-space: wrap;
+	margin: 3px;
+}
+
+.main input[type='checkbox']{
+	position: relative;
+	top: 5px;
+	right: 3px;
+	border-radius: 50%;
+}
+
+.main input[type='text']{
+	border: none;
+	border-bottom: 1px dashed #000000;
+	background: none;
+	margin: 3px;
+}
+
+.main p{
+	margin-left: 3px;
+}
+
+.shops_panel{
+	grid-column: 1 / span 1;
+	grid-row: 1 / span 1;
+	background: linear-gradient(147deg, #E8EBD5 0%, #ACB668 100%); /* Beige */
+}
+
+.miles_panel{
+	grid-column: 2 / span 1;
+	grid-row: 1 / span 1;
+	background: linear-gradient(147deg, #CEDDEB 0%, #6090BE 100%); /* Beau Blue */
+}
+
+.island_panel{
+	grid-column: 1 / span 1;
+	grid-row: 2 / span 1;
+	background: linear-gradient(147deg, #FFD6A5 0%, #FF910A 100%); /* Deep Champagne */
+}
+
+.villagers_panel{
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 1;
+	background: linear-gradient(147deg, #D4BDE7 0%, #8A4BBE 100%); /* Thistle */
+}
+
+.container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.container:nth-child(even){
+	background: rgba(255, 255, 255, 0.2);
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px){
+	/* HEADER */
+	.header > #date{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.header > #date::before{
+		content: none;
+	}
+	
+	.header > #lang_switch{
+		margin-right: 10px;
+	}
+
+	.header > #lang_switch:hover{
+		transform: none;
+	}
+
+	/* MAIN */
+	.main{
+		grid-template-columns: repeat(1, auto);
+		grid-template-rows: repeat(5, auto);
+	}
+
+	.shops_panel{
+		grid-column: 1 / span 1;
+		grid-row: 2 / span 1;
+	}
+	
+	.miles_panel{
+		grid-column: 1 / span 1;
+		grid-row: 3 / span 1;
+	}
+	
+	.island_panel{
+		grid-column: 1 / span 1;
+		grid-row: 4 / span 1;
+	}
+	
+	.villagers_panel{
+		grid-column: 1 / span 1;
+		grid-row: 5 / span 1;
+	}
+	
+	.infos_panel{
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 1;
+	}
+}
