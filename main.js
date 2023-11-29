@@ -1,69 +1,68 @@
 // Functions
-/* Load text in the shops panel according to the selected language */
-function loadShopsPanel(ls_lang){
-	document.getElementById("shops_title").innerHTML = str_shops_title[ls_lang];
-	document.getElementById("lab_nooks_cranny").innerHTML = str_nooks_cranny[ls_lang];
-	document.getElementById("lab_turnip_am").innerHTML = str_turnip_am[ls_lang];
-	document.getElementById("lab_turnip_pm").innerHTML = str_turnip_pm[ls_lang];
-	document.getElementById("lab_abels_sisters").innerHTML = str_abels_sisters[ls_lang];
-	document.getElementById("lab_sable").innerHTML = str_sable[ls_lang];
+function loadBeastTribesPanel(ls_lang){
+	document.getElementById("bt_title").innerHTML = str_bt_title[ls_lang];
+	document.getElementById("bt_lab01").innerHTML = str_bt_lab01[ls_lang];
+	document.getElementById("bt_lab02").innerHTML = str_bt_lab02[ls_lang];
+	document.getElementById("bt_lab03").innerHTML = str_bt_lab03[ls_lang];
+	document.getElementById("bt_lab04").innerHTML = str_bt_lab04[ls_lang];
+	document.getElementById("bt_lab05").innerHTML = str_bt_lab05[ls_lang];
+	document.getElementById("bt_lab06").innerHTML = str_bt_lab06[ls_lang];
+	document.getElementById("bt_lab07").innerHTML = str_bt_lab07[ls_lang];
+	document.getElementById("bt_lab08").innerHTML = str_bt_lab08[ls_lang];
+	document.getElementById("bt_lab09").innerHTML = str_bt_lab09[ls_lang];
+	document.getElementById("bt_lab10").innerHTML = str_bt_lab10[ls_lang];
+	document.getElementById("bt_lab11").innerHTML = str_bt_lab11[ls_lang];
+	document.getElementById("bt_lab12").innerHTML = str_bt_lab12[ls_lang];
+	document.getElementById("bt_lab13").innerHTML = str_bt_lab13[ls_lang];
+	document.getElementById("bt_lab14").innerHTML = str_bt_lab14[ls_lang];
+	document.getElementById("bt_lab15").innerHTML = str_bt_lab15[ls_lang];
+	document.getElementById("bt_lab16").innerHTML = str_bt_lab16[ls_lang];
+	document.getElementById("bt_lab17").innerHTML = str_bt_lab17[ls_lang];
 }
 
-/* Load text in the miles panel according to the selected language */
-function loadMilesPanel(ls_lang){
-	document.getElementById("miles_title").innerHTML = str_miles_title[ls_lang];
-	document.getElementById("lab_daily_miles").innerHTML = str_daily_miles[ls_lang];
-	document.getElementById("lab_nook_shopping").innerHTML = str_nook_shopping[ls_lang];
-	document.getElementById("lab_recycle_bin").innerHTML = str_recycle_bin[ls_lang];
-	document.getElementById("lab_miles_challenge").innerHTML = str_miles_challenges[ls_lang];
+function loadDailyPanel(ls_lang){
+	document.getElementById("daily_title").innerHTML = str_daily_title[ls_lang];
+	document.getElementById("daily_lab01").innerHTML = str_daily_lab01[ls_lang];
+	document.getElementById("daily_lab02").innerHTML = str_daily_lab02[ls_lang];
+	document.getElementById("daily_lab03").innerHTML = str_daily_lab03[ls_lang];
+	document.getElementById("daily_lab04").innerHTML = str_daily_lab04[ls_lang];
 }
 
-/* Load text in the island panel according to the selected language */
-function loadIslandPanel(ls_lang){
-	document.getElementById("island_title").innerHTML = str_island_title[ls_lang];
-	document.getElementById("lab_mailbox").innerHTML = str_mailbox[ls_lang];
-	document.getElementById("lab_fossils").innerHTML = str_fossils[ls_lang];
-	document.getElementById("lab_rocks").innerHTML = str_rocks[ls_lang];
-	document.getElementById("lab_gold_spot").innerHTML = str_gold_spot[ls_lang];
-	document.getElementById("lab_trees").innerHTML = str_trees[ls_lang];
-	document.getElementById("lab_flowers").innerHTML = str_flowers[ls_lang];
-	document.getElementById("lab_shells_clams").innerHTML = str_shells_clams[ls_lang];
-	document.getElementById("lab_message_bottle").innerHTML = str_message_bottle[ls_lang];
-	if(ls_lang === "en"){
-		document.getElementById("egg").addEventListener("click", easterEgg);
-	}
-	document.getElementById("lab_fruits").innerHTML = str_fruits[ls_lang];
-	document.getElementById("lab_wood").innerHTML = str_wood[ls_lang];
-	document.getElementById("lab_weeds").innerHTML = str_weeds[ls_lang];
+function loadWeeklyPanel(ls_lang){
+	document.getElementById("weekly_title").innerHTML = str_weekly_title[ls_lang];
+	document.getElementById("weekly_lab01").innerHTML = str_weekly_lab01[ls_lang];
+	document.getElementById("weekly_lab02").innerHTML = str_weekly_lab02[ls_lang];
+	document.getElementById("weekly_lab03").innerHTML = str_weekly_lab03[ls_lang];
+	document.getElementById("weekly_lab04").innerHTML = str_weekly_lab04[ls_lang];
+	document.getElementById("weekly_lab05").innerHTML = str_weekly_lab05[ls_lang];
+	document.getElementById("weekly_lab06").innerHTML = str_weekly_lab06[ls_lang];
+	document.getElementById("weekly_lab07").innerHTML = str_weekly_lab07[ls_lang];
+	document.getElementById("weekly_lab08").innerHTML = str_weekly_lab08[ls_lang];
+	document.getElementById("weekly_lab09").innerHTML = str_weekly_lab09[ls_lang];
+	document.getElementById("weekly_lab10").innerHTML = str_weekly_lab10[ls_lang];
+	document.getElementById("weekly_lab11").innerHTML = str_weekly_lab11[ls_lang];
 }
 
-/* Load text in the villagers panel according to the selected language */
-function loadVillagersPanel(ls_lang){
-	document.getElementById("villagers_title").innerHTML = str_villagers_title[ls_lang];
-	document.getElementById("tb_villager_01").placeholder = str_villager_01[ls_lang];
-	document.getElementById("tb_villager_02").placeholder = str_villager_02[ls_lang];
-	document.getElementById("tb_villager_03").placeholder = str_villager_03[ls_lang];
-	document.getElementById("tb_villager_04").placeholder = str_villager_04[ls_lang];
-	document.getElementById("tb_villager_05").placeholder = str_villager_05[ls_lang];
-	document.getElementById("tb_villager_06").placeholder = str_villager_06[ls_lang];
-	document.getElementById("tb_villager_07").placeholder = str_villager_07[ls_lang];
-	document.getElementById("tb_villager_08").placeholder = str_villager_08[ls_lang];
-	document.getElementById("tb_villager_09").placeholder = str_villager_09[ls_lang];
-	document.getElementById("tb_villager_10").placeholder = str_villager_10[ls_lang];
-	document.getElementById("lab_camping").innerHTML = str_camping[ls_lang];
-	document.getElementById("lab_visitors").innerHTML = str_visitors[ls_lang];
-	document.getElementById("p_visitors_list").innerHTML = str_visitors_list[ls_lang];
-}
-
-/* Load text in the infos panel according to the selected language */
-function loadInfosPanel(ls_lang){
-	document.getElementById("infos_title").innerHTML = str_infos_title[ls_lang];
-	document.getElementById("infos").innerHTML = str_infos[ls_lang];
-}
-
-/* When language is english, add a redirect to "Message in a bottle" by "The Police" when clicking on the text, just because it's funny :P */
-function easterEgg(){
-	window.open("https://www.youtube.com/watch?v=MbXWrmQW-OE");
+function loadHuntsPanel(ls_lang){
+	document.getElementById("hunts_title").innerText = str_hunts_title[ls_lang];
+	document.getElementById("hunts_lab01").innerText = str_hunts_lab01[ls_lang];
+	document.getElementById("hunts_lab02").innerText = str_hunts_lab02[ls_lang];
+	document.getElementById("hunts_lab03").innerText = str_hunts_lab03[ls_lang];
+	document.getElementById("hunts_lab04").innerText = str_hunts_lab04[ls_lang];
+	document.getElementById("hunts_lab05").innerText = str_hunts_lab05[ls_lang];
+	document.getElementById("hunts_lab06").innerText = str_hunts_lab06[ls_lang];
+	document.getElementById("hunts_lab07").innerText = str_hunts_lab07[ls_lang];
+	document.getElementById("hunts_lab08").innerText = str_hunts_lab08[ls_lang];
+	document.getElementById("hunts_lab09").innerText = str_hunts_lab09[ls_lang];
+	document.getElementById("hunts_lab10").innerText = str_hunts_lab10[ls_lang];
+	document.getElementById("hunts_lab11").innerText = str_hunts_lab11[ls_lang];
+	document.getElementById("hunts_lab12").innerText = str_hunts_lab12[ls_lang];
+	document.getElementById("hunts_lab13").innerText = str_hunts_lab13[ls_lang];
+	document.getElementById("hunts_lab14").innerText = str_hunts_lab14[ls_lang];
+	document.getElementById("hunts_lab15").innerText = str_hunts_lab15[ls_lang];
+	document.getElementById("hunts_lab16").innerText = str_hunts_lab16[ls_lang];
+	document.getElementById("hunts_lab17").innerText = str_hunts_lab17[ls_lang];
+	document.getElementById("hunts_lab18").innerText = str_hunts_lab18[ls_lang];
 }
 
 /* Load the correct date format, according to the the selected language */
@@ -89,23 +88,17 @@ function mainLoad(){
 	let ls_lang = localStorage['lang'];
 	loadLangSwitchButton(ls_lang);
 	loadDate(ls_lang);
-	loadShopsPanel(ls_lang);
-	loadMilesPanel(ls_lang);
-	loadIslandPanel(ls_lang);
-	loadVillagersPanel(ls_lang);
-	loadInfosPanel(ls_lang);
+	loadBeastTribesPanel(ls_lang);
+	loadDailyPanel(ls_lang);
+	loadWeeklyPanel(ls_lang);
+	loadHuntsPanel(ls_lang);
 }
 
 /* Check localstorage for existing values and load them */
-function loadValues(checkboxes, textinputs){
+function loadValues(checkboxes){
 	for(let i = 0; i < checkboxes.length; i++){
 		if(localStorage[checkboxes[i].id] !== undefined && localStorage[checkboxes[i].id] === "true"){
 			checkboxes[i].checked = true;
-		}
-	}
-	for(let i = 0; i < textinputs.length; i++){
-		if(localStorage[textinputs[i].id] !== undefined && localStorage[textinputs[i].id] !== ""){
-			textinputs[i].value = localStorage[textinputs[i].id];
 		}
 	}
 }
@@ -116,12 +109,16 @@ function saveValues(ev){
 }
 
 /* Add an event listener on every input, making it trigger the save at every change */
-function triggerSave(checkboxes, textinputs){
+function triggerSave(dailyCB, weeklyCB){
+	console.log(dailyCB);
+	console.log(weeklyCB);
+	let checkboxes = {
+		...dailyCB,
+		...weeklyCB
+	};
+	console.log(checkboxes);
 	for(let i = 0; i < checkboxes.length; i++){
 		checkboxes[i].addEventListener("change", saveValues);
-	}
-	for(let i = 0; i < textinputs.length; i++){
-		textinputs[i].addEventListener("change", saveValues);
 	}
 }
 
@@ -131,7 +128,7 @@ function needReset(checkboxes){
 		// If cookie doesn't exist, reset the checkboxes and set a cookie (used as a flag) expiring at 5am the next day (or same day if created before 5am)
 		resetValues(checkboxes);
 		let now = new Date();
-		let expiration = new Date(now.getFullYear(), now.getMonth(), now.getHours() < 5 ? now.getDate() : now.getDate() + 1, 5, 0, 0);
+		let expiration = new Date(now.getFullYear(), now.getMonth(), now.getHours() < 5 ? now.getDate() : now.getDate() + 1, 17, 0, 0);
 		document.cookie = "dailyResetDone=true; expires=" + expiration.toUTCString();
 	}
 }
@@ -160,13 +157,14 @@ window.onload = function (){
 	mainLoad();
 
 	// Make every input modification trigger an autosave
-	let checkboxes = document.querySelectorAll("input[type=checkbox]");
-	let textinputs = document.querySelectorAll("input[type=text]");
-	triggerSave(checkboxes, textinputs);
+	let dailyCB = document.querySelectorAll(".daily[type=checkbox]");
+	let weeklyCB = document.querySelectorAll("input.weekly[type=checkbox]");
+	triggerSave(dailyCB, weeklyCB);
+	/* Apres ici c'est encore à faire */
 	
 	// Check if a reset is needed (and if so, reset the checkboxes)
-	needReset(checkboxes);
+	/* needReset(dailyCB, weeklyCB);*/
 	
 	// After a (possible) reset, load the values from the localStorage
-	loadValues(checkboxes, textinputs);
+	/*loadValues(dailyCB, weeklyCB);*/
 }

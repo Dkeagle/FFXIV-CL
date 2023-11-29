@@ -149,7 +149,7 @@ body{
 	justify-content: space-between;
 }
 
-.container:nth-child(even){
+.container:nth-child(odd){
 	background: rgba(255, 255, 255, 0.2);
 }
 
