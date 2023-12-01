@@ -21,225 +21,233 @@ const str_days = {
 }
 
 /* BEAST TRIBES PANEL */
-const str_bt_title = {
-	en: "Beast Tribes",
-	fr: "Quêtes tribales"
-}
-const str_bt_lab01 = {
-	en: "Amalj'aa",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab02 = {
-	en: "Sylph",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab03 = {
-	en: "Kobold",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab04 = {
-	en: "Sahagin",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab05 = {
-	en: "Ixali",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab06 = {
-	en: "Vanu Vanu",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab07 = {
-	en: "Vath",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab08 = {
-	en: "Moogle",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab09 = {
-	en: "Kojin",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab10 = {
-	en: "Ananta",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab11 = {
-	en: "Namazu",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab12 = {
-	en: "Pixie",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab13 = {
-	en: "Qitari",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab14 = {
-	en: "Dwarf",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab15 = {
-	en: "Arkasodara",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab16 = {
-	en: "Omicron",
-	fr: "AWAITING TRANSLATION"
-}
-const str_bt_lab17 = {
-	en: "Loporrit",
-	fr: "AWAITING TRANSLATION"
-}
+const str_bt_texts = [
+	{
+		en: "Beast Tribes",
+		fr: "Quêtes tribales"
+	},
+	{
+		en: "Amalj'aa",
+		fr: "Amalj'aa"
+	},
+	{
+		en: "Sylph",
+		fr: "Sylphes"
+	},
+	{
+		en: "Kobold",
+		fr: "Kobolds"
+	},
+	{
+		en: "Sahagin",
+		fr: "Sahuagins"
+	},
+	{
+		en: "Ixal",
+		fr: "Ixali"
+	},
+	{
+		en: "Vanu Vanu",
+		fr: "Vanu Vanu"
+	},
+	{
+		en: "Vath",
+		fr: "Gnathes"
+	},
+	{
+		en: "Moogle",
+		fr: "Mogs célestes"
+	},
+	{
+		en: "Kojin",
+		fr: "Kojin verts"
+	},
+	{
+		en: "Ananta",
+		fr: "Anantas"
+	},
+	{
+		en: "Namazu",
+		fr: "Namazu"
+	},
+	{
+		en: "Pixie",
+		fr: "Pixies"
+	},
+	{
+		en: "Qitari",
+		fr: "Qitari"
+	},
+	{
+		en: "Dwarf",
+		fr: "Nains"
+	},
+	{
+		en: "Arkasodara",
+		fr: "Arkasodaras"
+	},
+	{
+		en: "Omicron",
+		fr: "Omicrons"
+	},
+	{
+		en: "Loporrit",
+		fr: "Loporrites"
+	}
+]
 
 /* DAILY PANEL */
-const str_daily_title = {
-	en: "Daily activities",
-	fr: "Activités journalières"
-}
-const str_daily_lab01 = {
-	en: "Duty Roulette",
-	fr: "Missions aléatoires"
-}
-const str_daily_lab02 = {
-	en: "Mini cactpot",
-	fr: "AWAITING TRANSLATION"
-}
-const str_daily_lab03 = {
-	en: "Grand Company Turn-in",
-	fr: "AWAITING TRANSLATION"
-}
-const str_daily_lab04 = {
-	en: "Treasure Hunt",
-	fr: "Chasse aux trésors"
-}
+const str_daily_texts = [
+	{
+		en: "Daily activities",
+		fr: "Activités journalières"
+	},
+	{
+		en: "Duty Roulette",
+		fr: "Missions aléatoires"
+	},
+	{
+		en: "Mini cactpot",
+		fr: "Mini Cactpot"
+	},
+	{
+		en: "Grand Company Turn-in",
+		fr: "Ravitaillement de grande compagnie"
+	},
+	{
+		en: "Treasure Hunt",
+		fr: "Chasse aux trésors"
+	}
+]
 
 /* WEEKLY PANEL */
-const str_weekly_title = {
-	en: "Weekly activities",
-	fr: "Activités hebdomadaires"
-}
-const str_weekly_lab01 = {
-	en: "Raids",
-	fr: "AWAITING TRANSLATION"
-}
-const str_weekly_lab02 = {
-	en: "Jumbo Cactpot",
-	fr: "AWAITING TRANSLATION"
-}
-const str_weekly_lab03 = {
-	en: "Challenge Log",
-	fr: "AWAITING TRANSLATION"
-}
-const str_weekly_lab04 = {
-	en: "Fashion Report",
-	fr: "AWAITING TRANSLATION"
-}
-const str_weekly_lab05 = {
-	en: "Wondrous Tails",
-	fr: "AWAITING TRANSLATION"
-}
-const str_weekly_lab06 = {
-	en: "Faux Hollows",
-	fr: "AWAITING TRANSLATION"
-}
-const str_weekly_lab07 = {
-	en: "Custom Deliveries",
-	fr: "AWAITING TRANSLATION"
-}
-const str_weekly_lab08 = {
-	en: "Squadron Mission",
-	fr: "AWAITING TRANSLATION"
-}
-const str_weekly_lab09 = {
-	en: "Blue Mage Log",
-	fr: "AWAITING TRANSLATION"
-}
-const str_weekly_lab10 = {
-	en: "Masked Carnivale",
-	fr: "AWAITING TRANSLATION"
-}
-const str_weekly_lab11 = {
-	en: "Doman Enclave Reconstruction",
-	fr: "AWAITING TRANSLATION"
-}
+const str_weekly_texts = [
+	{
+		en: "Weekly activities",
+		fr: "Activités hebdomadaires"
+	},
+	{
+		en: "Raids",
+		fr: "Raids"
+	},
+	{
+		en: "Jumbo Cactpot",
+		fr: "Mega Cactpot"
+	},
+	{
+		en: "Challenge Log",
+		fr: "Carnet d'objectifs"
+	},
+	{
+		en: "Fashion Report",
+		fr: "Revue de mode"
+	},
+	{
+		en: "Wondrous Tails",
+		fr: "Carnet de Khloe"
+	},
+	{
+		en: "Faux Hollows",
+		fr: "Touché-tourné"
+	},
+	{
+		en: "Custom Deliveries",
+		fr: "Livraisons spéciales"
+	},
+	{
+		en: "Squadron Mission",
+		fr: "Mission d'escouade"
+	},
+	{
+		en: "Blue Mage Log",
+		fr: "Palmarès bleu"
+	},
+	{
+		en: "Masked Carnivale",
+		fr: "La Grande Mascarade"
+	},
+	{
+		en: "Doman Enclave Reconstruction",
+		fr: "Reconstruction du quartier enclavé"
+	}
+]
 
 /* HUNTS PANEL */
-const str_hunts_title = {
-	en: "Hunts",
-	fr: "Chasses"
-}
-const str_hunts_lab01 = {
-	en: "Regular Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab02 = {
-	en: "Elite Marks (Weekly)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab03 = {
-	en: "Level 1 Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab04 = {
-	en: "Level 2 Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab05 = {
-	en: "Level 3 Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab06 = {
-	en: "Elite Marks (Weekly)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab07 = {
-	en: "Level 1 Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab08 = {
-	en: "Level 2 Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab09 = {
-	en: "Level 3 Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab10 = {
-	en: "Elite Marks (Weekly)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab11 = {
-	en: "One-nut Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab12 = {
-	en: "Two-nut Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab13 = {
-	en: "Three-nut Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab14 = {
-	en: "Elite Nutsy Marks (Weekly)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab15 = {
-	en: "Junior Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab16 = {
-	en: "Associate Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab17 = {
-	en: "Senior Marks (Daily)",
-	fr: "AWAITING TRANSLATION"
-}
-const str_hunts_lab18 = {
-	en: "Elite Marks (Weekly)",
-	fr: "AWAITING TRANSLATION"
-}
+const str_hunts_texts = [
+	{
+		en: "Hunts",
+		fr: "Chasses"
+	},
+	{
+		en: "Regular Marks (Daily)",
+		fr: "Contrats de chasse (Quotidiens)"
+	},
+	{
+		en: "Elite Marks (Weekly)",
+		fr: "Contrat d'élite (Hebdomadaire)"
+	},
+	{
+		en: "Level 1 Marks (Daily)",
+		fr: "Contrats du clan, débutant (Quotidiens)"
+	},
+	{
+		en: "Level 2 Marks (Daily)",
+		fr: "Contrats du clan, intermédiaire (Quotidiens)"
+	},
+	{
+		en: "Level 3 Marks (Daily)",
+		fr: "Contrats du clan, avancé (Quotidiens)"
+	},
+	{
+		en: "Elite Marks (Weekly)",
+		fr: "Contrat d'élite du clan (Hebdomadaire)"
+	},
+	{
+		en: "Level 1 Marks (Daily)",
+		fr: "Contrats de vétéran, débutant (Quotidiens)"
+	},
+	{
+		en: "Level 2 Marks (Daily)",
+		fr: "Contrats de vétéran, intermédiaire (Quotidiens)"
+	},
+	{
+		en: "Level 3 Marks (Daily)",
+		fr: "Contrats de vétéran, avancé (Quotidiens)"
+	},
+	{
+		en: "Elite Marks (Weekly)",
+		fr: "Contrat d'élite de vétéran (Hebdomadaire)"
+	},
+	{
+		en: "One-nut Marks (Daily)",
+		fr: "Contrat du clan Kupo, débutant (Quotidiens)"
+	},
+	{
+		en: "Two-nut Marks (Daily)",
+		fr: "Contrat du clan Kupo, intermédiaire (Quotidiens)"
+	},
+	{
+		en: "Three-nut Marks (Daily)",
+		fr: "Contrat du clan Kupo, avancé (Quotidiens)"
+	},
+	{
+		en: "Elite Nutsy Marks (Weekly)",
+		fr: "Contrat d'élite du clan Kupo (Hebdomadaire)"
+	},
+	{
+		en: "Junior Marks (Daily)",
+		fr: "Contrats du collège des glaneurs, débutant (Quotidiens)"
+	},
+	{
+		en: "Associate Marks (Daily)",
+		fr: "Contrats du collège des glaneurs, intermédiaire (Quotidiens)"
+	},
+	{
+		en: "Senior Marks (Daily)",
+		fr: "Contrats du collège des glaneurs, avancé (Quotidiens)"
+	},
+	{
+		en: "Elite Marks (Weekly)",
+		fr: "Contrat d'élite du collège des glaneurs (Hebdomadaire)"
+	}
+]

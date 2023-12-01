@@ -1,68 +1,8 @@
 // Functions
-function loadBeastTribesPanel(ls_lang){
-	document.getElementById("bt_title").innerHTML = str_bt_title[ls_lang];
-	document.getElementById("bt_lab01").innerHTML = str_bt_lab01[ls_lang];
-	document.getElementById("bt_lab02").innerHTML = str_bt_lab02[ls_lang];
-	document.getElementById("bt_lab03").innerHTML = str_bt_lab03[ls_lang];
-	document.getElementById("bt_lab04").innerHTML = str_bt_lab04[ls_lang];
-	document.getElementById("bt_lab05").innerHTML = str_bt_lab05[ls_lang];
-	document.getElementById("bt_lab06").innerHTML = str_bt_lab06[ls_lang];
-	document.getElementById("bt_lab07").innerHTML = str_bt_lab07[ls_lang];
-	document.getElementById("bt_lab08").innerHTML = str_bt_lab08[ls_lang];
-	document.getElementById("bt_lab09").innerHTML = str_bt_lab09[ls_lang];
-	document.getElementById("bt_lab10").innerHTML = str_bt_lab10[ls_lang];
-	document.getElementById("bt_lab11").innerHTML = str_bt_lab11[ls_lang];
-	document.getElementById("bt_lab12").innerHTML = str_bt_lab12[ls_lang];
-	document.getElementById("bt_lab13").innerHTML = str_bt_lab13[ls_lang];
-	document.getElementById("bt_lab14").innerHTML = str_bt_lab14[ls_lang];
-	document.getElementById("bt_lab15").innerHTML = str_bt_lab15[ls_lang];
-	document.getElementById("bt_lab16").innerHTML = str_bt_lab16[ls_lang];
-	document.getElementById("bt_lab17").innerHTML = str_bt_lab17[ls_lang];
-}
-
-function loadDailyPanel(ls_lang){
-	document.getElementById("daily_title").innerHTML = str_daily_title[ls_lang];
-	document.getElementById("daily_lab01").innerHTML = str_daily_lab01[ls_lang];
-	document.getElementById("daily_lab02").innerHTML = str_daily_lab02[ls_lang];
-	document.getElementById("daily_lab03").innerHTML = str_daily_lab03[ls_lang];
-	document.getElementById("daily_lab04").innerHTML = str_daily_lab04[ls_lang];
-}
-
-function loadWeeklyPanel(ls_lang){
-	document.getElementById("weekly_title").innerHTML = str_weekly_title[ls_lang];
-	document.getElementById("weekly_lab01").innerHTML = str_weekly_lab01[ls_lang];
-	document.getElementById("weekly_lab02").innerHTML = str_weekly_lab02[ls_lang];
-	document.getElementById("weekly_lab03").innerHTML = str_weekly_lab03[ls_lang];
-	document.getElementById("weekly_lab04").innerHTML = str_weekly_lab04[ls_lang];
-	document.getElementById("weekly_lab05").innerHTML = str_weekly_lab05[ls_lang];
-	document.getElementById("weekly_lab06").innerHTML = str_weekly_lab06[ls_lang];
-	document.getElementById("weekly_lab07").innerHTML = str_weekly_lab07[ls_lang];
-	document.getElementById("weekly_lab08").innerHTML = str_weekly_lab08[ls_lang];
-	document.getElementById("weekly_lab09").innerHTML = str_weekly_lab09[ls_lang];
-	document.getElementById("weekly_lab10").innerHTML = str_weekly_lab10[ls_lang];
-	document.getElementById("weekly_lab11").innerHTML = str_weekly_lab11[ls_lang];
-}
-
-function loadHuntsPanel(ls_lang){
-	document.getElementById("hunts_title").innerText = str_hunts_title[ls_lang];
-	document.getElementById("hunts_lab01").innerText = str_hunts_lab01[ls_lang];
-	document.getElementById("hunts_lab02").innerText = str_hunts_lab02[ls_lang];
-	document.getElementById("hunts_lab03").innerText = str_hunts_lab03[ls_lang];
-	document.getElementById("hunts_lab04").innerText = str_hunts_lab04[ls_lang];
-	document.getElementById("hunts_lab05").innerText = str_hunts_lab05[ls_lang];
-	document.getElementById("hunts_lab06").innerText = str_hunts_lab06[ls_lang];
-	document.getElementById("hunts_lab07").innerText = str_hunts_lab07[ls_lang];
-	document.getElementById("hunts_lab08").innerText = str_hunts_lab08[ls_lang];
-	document.getElementById("hunts_lab09").innerText = str_hunts_lab09[ls_lang];
-	document.getElementById("hunts_lab10").innerText = str_hunts_lab10[ls_lang];
-	document.getElementById("hunts_lab11").innerText = str_hunts_lab11[ls_lang];
-	document.getElementById("hunts_lab12").innerText = str_hunts_lab12[ls_lang];
-	document.getElementById("hunts_lab13").innerText = str_hunts_lab13[ls_lang];
-	document.getElementById("hunts_lab14").innerText = str_hunts_lab14[ls_lang];
-	document.getElementById("hunts_lab15").innerText = str_hunts_lab15[ls_lang];
-	document.getElementById("hunts_lab16").innerText = str_hunts_lab16[ls_lang];
-	document.getElementById("hunts_lab17").innerText = str_hunts_lab17[ls_lang];
-	document.getElementById("hunts_lab18").innerText = str_hunts_lab18[ls_lang];
+function loadText(textNodes, langFileConst, ls_lang){
+	for(let i = 0; i < textNodes.length; i++){
+		textNodes[i].innerHTML = langFileConst[i][ls_lang];		
+	}
 }
 
 /* Load the correct date format, according to the the selected language */
@@ -83,15 +23,15 @@ function loadLangSwitchButton(ls_lang){
 	lang_switch_button.title = str_lang_switch_title[ls_lang];
 }
 
-/* Main loading functions, will call every others loading functions */
-function mainLoad(){
+/* Main loading functions */
+function mainLoad(bt_texts, daily_texts, weekly_texts, hunts_texts){
 	let ls_lang = localStorage['lang'];
 	loadLangSwitchButton(ls_lang);
 	loadDate(ls_lang);
-	loadBeastTribesPanel(ls_lang);
-	loadDailyPanel(ls_lang);
-	loadWeeklyPanel(ls_lang);
-	loadHuntsPanel(ls_lang);
+	loadText(bt_texts, str_bt_texts, ls_lang);
+	loadText(daily_texts, str_daily_texts, ls_lang);
+	loadText(weekly_texts, str_weekly_texts, ls_lang);
+	loadText(hunts_texts, str_hunts_texts, ls_lang);
 }
 
 /* Check localstorage for existing values and load them */
@@ -105,32 +45,33 @@ function loadValues(checkboxes){
 
 /* When triggered by change event, save the triggered element value (or state) in the localStorage */
 function saveValues(ev){
-	localStorage[ev.target.id] = ev.target.type === "checkbox" ? ev.target.checked : ev.target.value 
+	localStorage[ev.target.id] = ev.target.checked;
 }
 
 /* Add an event listener on every input, making it trigger the save at every change */
-function triggerSave(dailyCB, weeklyCB){
-	console.log(dailyCB);
-	console.log(weeklyCB);
-	let checkboxes = {
-		...dailyCB,
-		...weeklyCB
-	};
-	console.log(checkboxes);
+function triggerSave(checkboxes){
 	for(let i = 0; i < checkboxes.length; i++){
 		checkboxes[i].addEventListener("change", saveValues);
 	}
 }
 
 /* Check if a reset is needed */
-function needReset(checkboxes){
-	if(document.cookie.indexOf("dailyResetDone=") === -1){
-		// If cookie doesn't exist, reset the checkboxes and set a cookie (used as a flag) expiring at 5am the next day (or same day if created before 5am)
-		resetValues(checkboxes);
-		let now = new Date();
-		let expiration = new Date(now.getFullYear(), now.getMonth(), now.getHours() < 5 ? now.getDate() : now.getDate() + 1, 17, 0, 0);
-		document.cookie = "dailyResetDone=true; expires=" + expiration.toUTCString();
+function needReset(daily4pmCB, daily9pmCB, weeklyCB) {
+	let now = new Date();
+	
+	function resetAndSetCookie(checkBox, cookieName, resetHour, resetDay = 1) {
+		if (document.cookie.indexOf(cookieName + "=") === -1) {
+			resetValues(checkBox);
+			let expiration = new Date(now.getFullYear(), now.getMonth(), now.getHours() < resetHour ? now.getDate() : now.getDate() + resetDay, resetHour, 0, 0);
+			document.cookie = cookieName + "=true; expires=" + expiration.toUTCString();
+		}
 	}
+  
+	resetAndSetCookie(daily4pmCB, "daily4pmResetDone", 17);
+	resetAndSetCookie(daily9pmCB, "daily9pmResetDone", 22);
+  
+	let daysBeforeTuesday = (2 - now.getDay() + 7) % 7;
+	resetAndSetCookie(weeklyCB, "weeklyResetDone", 10, daysBeforeTuesday);
 }
 
 /* Reset every checkboxes to false (unchecked) */
@@ -140,31 +81,61 @@ function resetValues(checkboxes){
 	}
 }
 
+/* Count the amount of checked boxes and disable the others if max amount if reached */
+function countCheckedBoxes(checkboxes, amount){
+	let checkedCount = document.querySelectorAll("input.btCount[type=checkbox]:checked").length;
+
+	checkboxes.forEach(checkbox => {
+		checkbox.disabled = checkedCount >= amount && !checkbox.checked;
+	});
+}
+
+/* Set the maximum amount of simultaneously checked boxes in a specific list */
+function triggerMaxCheckedCount(checkboxes, maxCount){
+	for(let i = 0; i < checkboxes.length; i++){
+		checkboxes[i].addEventListener("change", () => countCheckedBoxes(checkboxes, maxCount));
+	}
+}
+
 /* Window is loaded */
-window.onload = function (){
+window.addEventListener("DOMContentLoaded", () => {
 	// Check localStorage for language, set to english by default
 	if(localStorage['lang'] === undefined || localStorage['lang'] === ''){
 		localStorage['lang'] = "en"
 	}
+
+	// Get the different labels
+	let bt_texts = document.querySelectorAll(".bt_texts");
+	let daily_texts = document.querySelectorAll(".daily_texts");
+	let weekly_texts = document.querySelectorAll(".weekly_texts");
+	let hunts_texts = document.querySelectorAll(".hunts_texts");
 	
 	// Load the event listener on the language switch
 	document.getElementById("lang_switch").addEventListener("click", () => {
 		localStorage['lang'] === "en" ? localStorage['lang'] = "fr" : localStorage['lang'] = "en"
-		mainLoad();
+		mainLoad(bt_texts, daily_texts, weekly_texts, hunts_texts);
 	})
 	
 	// Call the main loading function
-	mainLoad();
+	mainLoad(bt_texts, daily_texts, weekly_texts, hunts_texts);
+
+	// Get the different checkboxes
+	let daily4pmCB = document.querySelectorAll("input.daily4pm[type=checkbox]")
+	let daily9pmCB = document.querySelectorAll("input.daily9pm[type=checkbox]")
+	let weeklyCB = document.querySelectorAll("input.weekly[type=checkbox]");
+	let btCount = document.querySelectorAll("input.btCount[type=checkbox]");
+	let checkboxes = document.querySelectorAll("input[type=checkbox]");
 
 	// Make every input modification trigger an autosave
-	let dailyCB = document.querySelectorAll(".daily[type=checkbox]");
-	let weeklyCB = document.querySelectorAll("input.weekly[type=checkbox]");
-	triggerSave(dailyCB, weeklyCB);
-	/* Apres ici c'est encore à faire */
+	triggerSave(checkboxes);
 	
 	// Check if a reset is needed (and if so, reset the checkboxes)
-	/* needReset(dailyCB, weeklyCB);*/
+	needReset(daily4pmCB, daily9pmCB, weeklyCB);
 	
 	// After a (possible) reset, load the values from the localStorage
-	/*loadValues(dailyCB, weeklyCB);*/
-}
+	loadValues(checkboxes);
+
+	// Beast tribes panel only authorize 12 maximum checked boxes at once
+	triggerMaxCheckedCount(btCount, 12);
+	countCheckedBoxes(btCount, 12);
+});

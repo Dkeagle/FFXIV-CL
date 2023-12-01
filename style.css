@@ -97,50 +97,46 @@ body{
 	margin: 0 0 5px 20px;
 }
 
+.main h3{
+	margin: 10px 0 3px 0;
+}
+
 .main label{
 	white-space: wrap;
-	margin: 3px;
+	margin: 3px auto 3px 3px;
 }
 
 .main input[type='checkbox']{
 	position: relative;
-	top: 5px;
-	right: 3px;
+	margin-right: 3px;
 	border-radius: 50%;
-}
-
-.main input[type='text']{
-	border: none;
-	border-bottom: 1px dashed #000000;
-	background: none;
-	margin: 3px;
 }
 
 .main p{
 	margin-left: 3px;
 }
 
-.shops_panel{
+.bt_panel{
 	grid-column: 1 / span 1;
-	grid-row: 1 / span 1;
+	grid-row: 1 / span 2;
 	background: linear-gradient(147deg, #E8EBD5 0%, #ACB668 100%); /* Beige */
 }
 
-.miles_panel{
+.daily_panel{
 	grid-column: 2 / span 1;
 	grid-row: 1 / span 1;
 	background: linear-gradient(147deg, #CEDDEB 0%, #6090BE 100%); /* Beau Blue */
 }
 
-.island_panel{
-	grid-column: 1 / span 1;
+.weekly_panel{
+	grid-column: 2 / span 1;
 	grid-row: 2 / span 1;
 	background: linear-gradient(147deg, #FFD6A5 0%, #FF910A 100%); /* Deep Champagne */
 }
 
-.villagers_panel{
-	grid-column: 2 / span 1;
-	grid-row: 2 / span 1;
+.hunts_panel{
+	grid-column: 3 / span 1;
+	grid-row: 1 / span 2;
 	background: linear-gradient(147deg, #D4BDE7 0%, #8A4BBE 100%); /* Thistle */
 }
 
