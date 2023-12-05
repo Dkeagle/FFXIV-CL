@@ -56,12 +56,13 @@ function triggerSave(checkboxes){
 }
 
 /* Check if a reset is needed */
-function needReset(daily4pmCB, daily9pmCB, weeklyCB) {
+function needReset(daily4pmCB, daily9pmCB, weeklyTuesdayCB, weeklySaturdayCB) {
 	let now = new Date();
 	
 	function resetAndSetCookie(checkBox, cookieName, resetHour, resetDay = 1) {
 		if (document.cookie.indexOf(cookieName + "=") === -1) {
 			resetValues(checkBox);
+			resetDay = resetDay === 0 ? 7 : resetDay;
 			let expiration = new Date(now.getFullYear(), now.getMonth(), now.getHours() < resetHour ? now.getDate() : now.getDate() + resetDay, resetHour, 0, 0);
 			document.cookie = cookieName + "=true; expires=" + expiration.toUTCString();
 		}
@@ -71,7 +72,10 @@ function needReset(daily4pmCB, daily9pmCB, weeklyCB) {
 	resetAndSetCookie(daily9pmCB, "daily9pmResetDone", 22);
   
 	let daysBeforeTuesday = (2 - now.getDay() + 7) % 7;
-	resetAndSetCookie(weeklyCB, "weeklyResetDone", 10, daysBeforeTuesday);
+	resetAndSetCookie(weeklyTuesdayCB, "weeklyTuesdayResetDone", 10, daysBeforeTuesday);
+
+	let daysBeforeSaturday = (6 - now.getDay() + 7) % 7;
+	resetAndSetCookie(weeklySaturdayCB, "weeklySaturdayResetDone", 21, daysBeforeSaturday);
 }
 
 /* Reset every checkboxes to false (unchecked) */
@@ -122,7 +126,8 @@ window.addEventListener("DOMContentLoaded", () => {
 	// Get the different checkboxes
 	let daily4pmCB = document.querySelectorAll("input.daily4pm[type=checkbox]")
 	let daily9pmCB = document.querySelectorAll("input.daily9pm[type=checkbox]")
-	let weeklyCB = document.querySelectorAll("input.weekly[type=checkbox]");
+	let weeklyTuesdayCB = document.querySelectorAll("input.weeklyTuesday[type=checkbox]");
+	let weeklySaturdayCB = document.querySelectorAll("input.weeklySaturday[type=checkbox]");
 	let btCount = document.querySelectorAll("input.btCount[type=checkbox]");
 	let checkboxes = document.querySelectorAll("input[type=checkbox]");
 
@@ -130,7 +135,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	triggerSave(checkboxes);
 	
 	// Check if a reset is needed (and if so, reset the checkboxes)
-	needReset(daily4pmCB, daily9pmCB, weeklyCB);
+	needReset(daily4pmCB, daily9pmCB, weeklyTuesdayCB, weeklySaturdayCB);
 	
 	// After a (possible) reset, load the values from the localStorage
 	loadValues(checkboxes);
